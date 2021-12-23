@@ -44,6 +44,10 @@ public class QueryProcessor {
             return "Paris";
         }
 
+        if (query.toLowerCase().contains("theresa may first elected")){
+            return "2016";
+        }
+
             return "";
     }
 }
