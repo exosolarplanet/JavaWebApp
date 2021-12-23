@@ -30,9 +30,14 @@ public class QueryProcessor {
             NumberComparer numberComparer = new NumberComparer();
             return ""+numberComparer.add(query);
         }
+
         if (query.toLowerCase().contains("minus")){
             NumberComparer numberComparer = new NumberComparer();
             return ""+numberComparer.minus(query);
+        }
+
+        if (query.toLowerCase().contains("banana")){
+            return "yellow";
         }
 
 
