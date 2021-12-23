@@ -14,6 +14,10 @@ public class QueryProcessor {
                     "was an English playwright, poet and translator of the Elizabethan era." +
                     " Marlowe is among the most famous of the Elizabethan playwrights.";
         }
+
+        if (query.toLowerCase().contains("what is your name")){
+            return "Sue & Ece";
+        }
         return "";
     }
 }
