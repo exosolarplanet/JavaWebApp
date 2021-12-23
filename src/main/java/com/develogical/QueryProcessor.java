@@ -20,7 +20,9 @@ public class QueryProcessor {
         }
 
         if (query.toLowerCase().contains("numbers is the largest")){
+            System.out.println("query = "+query);
             String[] v = query.split(":");
+            System.out.println("v = "+v);
             NumberComparer numberComparer = new NumberComparer();
             return ""+numberComparer.getMax(v[1]);
         }
