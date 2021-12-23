@@ -22,7 +22,7 @@ public class QueryProcessor {
         if (query.toLowerCase().contains("numbers is the largest")){
             System.out.println("query = "+query);
             String[] v = query.split(":");
-            System.out.println("v = "+v);
+            System.out.println("v = "+v[2]);
             NumberComparer numberComparer = new NumberComparer();
             return ""+numberComparer.getMax(v[2]);
         }
