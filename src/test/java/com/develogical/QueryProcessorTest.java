@@ -46,10 +46,14 @@ public class QueryProcessorTest {
         assertThat(queryProcessor.process("190e75b0: which of the following numbers is the largest: 127, 542, 34, 45"), containsString("542"));
     }
 
-    @Test @Ignore
+    @Test
     public void knowsTheAddition() throws Exception {
         assertThat(queryProcessor.process("is 16 plus 18"), containsString("34"));
     }
 
+    @Test
+    public void knowsTheSubtraction() throws Exception {
+        assertThat(queryProcessor.process("is 19 minus 13"), containsString("6"));
+    }
 
 }

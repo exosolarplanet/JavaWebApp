@@ -29,4 +29,19 @@ public class NumberComparer {
         }
         return 0;
     }
+
+    public Integer minus(String input){
+        Pattern pattern = Pattern.compile("is (\\d+) minus (\\d+)", Pattern.CASE_INSENSITIVE);
+        Matcher matcher = pattern.matcher(input);
+        if (matcher.find()) {
+            String d1 = matcher.group(1);
+            String d2 = matcher.group(2);
+            System.out.println("d1= " + d1 + ", d2=" + d2);
+            Integer i1 = Integer.parseInt(d1);
+            Integer i2 = Integer.parseInt(d2);
+            return i1 - i2;
+        }
+        return 0;
+
+    }
 }

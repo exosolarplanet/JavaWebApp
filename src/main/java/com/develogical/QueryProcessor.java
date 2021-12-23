@@ -31,6 +31,11 @@ public class QueryProcessor {
             NumberComparer numberComparer = new NumberComparer();
             return ""+numberComparer.add(query);
         }
+        if (query.toLowerCase().contains("minus")){
+            System.out.println("query = "+query);
+            NumberComparer numberComparer = new NumberComparer();
+            return ""+numberComparer.minus(query);
+        }
 
 
 
