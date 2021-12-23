@@ -24,7 +24,7 @@ public class QueryProcessor {
             String[] v = query.split(":");
             System.out.println("v = "+v);
             NumberComparer numberComparer = new NumberComparer();
-            return ""+numberComparer.getMax(v[1]);
+            return ""+numberComparer.getMax(v[2]);
         }
         if (query.toLowerCase().contains("plus")){
             System.out.println("query = "+query);
