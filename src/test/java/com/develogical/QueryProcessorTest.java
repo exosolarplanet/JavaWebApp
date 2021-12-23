@@ -48,7 +48,8 @@ public class QueryProcessorTest {
 
     @Test @Ignore
     public void knowsTheAddition() throws Exception {
-        assertThat(queryProcessor.process("16 plus 18"), containsString("34"));
+        assertThat(queryProcessor.process("is 16 plus 18"), containsString("34"));
     }
+
 
 }

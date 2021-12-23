@@ -26,9 +26,15 @@ public class QueryProcessor {
             NumberComparer numberComparer = new NumberComparer();
             return ""+numberComparer.getMax(v[1]);
         }
+        if (query.toLowerCase().contains("plus")){
+            System.out.println("query = "+query);
+            NumberComparer numberComparer = new NumberComparer();
+            return ""+numberComparer.add(query);
+        }
 
 
-        return "";
+
+            return "";
     }
 }
 
