@@ -43,7 +43,7 @@ public class QueryProcessorTest {
 
     @Test
     public void knowsTheBiggestNumber2() throws Exception {
-        assertThat(queryProcessor.process("numbers is the largest:532,94,647,26"), containsString("647"));
+        assertThat(queryProcessor.process("numbers is the largest:532, 94, 647, 26"), containsString("647"));
     }
 
     @Test @Ignore
