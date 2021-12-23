@@ -18,6 +18,16 @@ public class QueryProcessor {
         if (query.toLowerCase().contains("what is your name")){
             return "Sue & Ece";
         }
+
+        if (query.toLowerCase().contains("numbers is the largest")){
+            String[] v = query.split(":");
+            NumberComparer numberComparer = new NumberComparer();
+            return ""+numberComparer.getMax(v[1]);
+        }
+
+
         return "";
     }
 }
+
+
