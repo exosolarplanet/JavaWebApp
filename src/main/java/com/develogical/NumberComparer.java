@@ -8,15 +8,16 @@ import java.util.stream.Stream;
 
 public class NumberComparer {
 
-    public Integer getMax(String input){
-        String[] results = input.replace(" ","").split(",");
+    public Integer getMax(String input) {
+        String[] results = input.replace(" ", "").split(",");
         Stream<String> stream = Arrays.stream(results);
         Optional<Integer> maxNumber = Arrays.stream(results).map(s -> Integer.parseInt(s)).
-                max((i,j) -> i.compareTo(j));
+                max((i, j) -> i.compareTo(j));
         return maxNumber.get();
 
     }
-    public Integer add(String input){
+
+    public Integer add(String input) {
         Pattern pattern = Pattern.compile("is (\\d+) plus (\\d+)", Pattern.CASE_INSENSITIVE);
         Matcher matcher = pattern.matcher(input);
         if (matcher.find()) {
@@ -30,7 +31,7 @@ public class NumberComparer {
         return 0;
     }
 
-    public Integer minus(String input){
+    public Integer minus(String input) {
         Pattern pattern = Pattern.compile("is (\\d+) minus (\\d+)", Pattern.CASE_INSENSITIVE);
         Matcher matcher = pattern.matcher(input);
         if (matcher.find()) {
@@ -42,6 +43,5 @@ public class NumberComparer {
             return i1 - i2;
         }
         return 0;
-
     }
 }

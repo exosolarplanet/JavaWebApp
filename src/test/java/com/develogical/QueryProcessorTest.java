@@ -68,8 +68,6 @@ public class QueryProcessorTest {
 
     @Test
     public void knowsWhenTheresaWasElected() throws Exception {
-        assertThat(queryProcessor.process("5    6904b290: which year was Theresa May first elected as the Prime Minister of Great Britain\n"), containsString("2016"));
+        assertThat(queryProcessor.process("56904b290: which year was Theresa May first elected as the Prime Minister of Great Britain\n"), containsString("2016"));
     }
-
-
 }
