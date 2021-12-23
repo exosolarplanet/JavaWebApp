@@ -24,6 +24,7 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn verify
+    - name: Deploy to Heroku
       uses: AkhileshNS/heroku-deploy@v3.12.12
       with:
         heroku_api_key: ea1c9dfe-0eec-4789-9fe4-500f3b40684e
