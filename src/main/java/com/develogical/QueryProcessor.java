@@ -40,7 +40,9 @@ public class QueryProcessor {
             return "yellow";
         }
 
-
+        if (query.toLowerCase().contains("eiffel")){
+            return "Paris";
+        }
 
             return "";
     }

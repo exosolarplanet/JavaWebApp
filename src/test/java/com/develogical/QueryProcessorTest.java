@@ -61,4 +61,9 @@ public class QueryProcessorTest {
         assertThat(queryProcessor.process("f2564d20: what colour is a banana"), containsString("yellow"));
     }
 
+    @Test
+    public void knowsWhereTheEiffelTowerIs() throws Exception {
+        assertThat(queryProcessor.process("5d313100: which city is the Eiffel tower in"), containsString("Paris"));
+    }
+
 }
